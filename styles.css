@@ -24,6 +24,8 @@ nav ul {
 
 nav ul li {
     margin: 0.5rem;
+    width: 120px;
+    height: 70px;
 }
 
 nav ul li a {
@@ -48,12 +50,18 @@ main {
 
 section {
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 h2 {
     background-color: #f4f4f4;
     padding: 0.5rem;
+    text-align: center; /* Центрування тексту */
+    width: 200px; /* Ширина 200px */
+    margin: 0 auto; /* Центрування по горизонталі */
+    border-radius: 100px; /* Заокруглені кути */
 }
+
 
 ul {
     list-style: none;
@@ -73,38 +81,30 @@ ul li {
     box-sizing: border-box;
     text-align: center;
     position: relative;
-    transition: transform 0.3s;
-}
-
-ul li:hover {
-    transform: scale(1.05);
-}
-
-ul li .details {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem;
-    box-sizing: border-box;
-    z-index: 1;
-}
-
-ul li:hover .details {
-    display: block;
+    overflow: hidden;
+    transition: transform 0.3s, height 0.3s;
+    border-radius: 10px; /* Додаємо заокруглення країв */
 }
 
 ul li img {
     width: 200px;
     height: 150px;
-    object-fit: cover;
     display: block;
     margin: 0 auto 0.5rem;
+}
+
+.details {
+    display: none;
+    text-align: left;
+    padding-top: 1rem;
+}
+
+ul li:hover {
+    height: 300px; /* Менше видовження секцій при наведенні курсору */
+}
+
+ul li:hover .details {
+    display: block;
 }
 
 footer {
