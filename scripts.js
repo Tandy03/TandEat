@@ -1,19 +1,30 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelectorAll('ul li');
 
-    items.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            item.style.zIndex = 10;
-            const details = item.querySelector('.details');
-            if (details) {
-                const originalHeight = item.offsetHeight;
-                item.style.height = `${originalHeight + details.offsetHeight}px`;
-            }
-        });
+document.querySelectorAll('ul li').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        item.style.height = '360px'; // видовження секцій при наведенні курсору
+    });
 
-        item.addEventListener('mouseleave', () => {
-            item.style.zIndex = 1;
-            item.style.height = '250px';
-        });
+    item.addEventListener('mouseleave', () => {
+        item.style.height = '250px'; // повернення секцій до свого розміру при відведенні курсору
+    });
+});
+
+document.querySelectorAll('nav ul li').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        item.style.height = '70px'; // видовження секцій при наведенні курсору
+    });
+
+    item.addEventListener('mouseleave', () => {
+        item.style.height = '70px'; // повернення секцій до свого розміру при відведенні курсору
+    });
+});
+
+document.querySelectorAll('#drinks ul li').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        item.style.height = '310px'; // видовження секцій при наведенні курсору
+    });
+
+    item.addEventListener('mouseleave', () => {
+        item.style.height = '250px'; // повернення секцій до свого розміру при відведенні курсору
     });
 });
